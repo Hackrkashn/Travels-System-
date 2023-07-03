@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Managers List</title>
+  <style>
+    body {
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      
+      table.managers-table {
+        width: 80%;
+        max-width: 800px;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      
+      caption {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      th, td {
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+      }
+      
+      th {
+        background-color: #8fc1cc;
+      }
+      
+      tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
+      tbody tr:hover {
+        background-color: #eaf3fd;
+      }
+      
+      .back-button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .back-button:hover {
+        background-color: #45a049;
+      }
+      
+      .back-button:focus {
+        outline: none;
+      }
+      .main{
+        min-width: 800px;
+        max-width: 810px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      
+  </style>
+</head>
+<body>
+    <div class="main">
+    <table class="managers-table">
+        <caption>Managers List</caption>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>State</th>
+          </tr>
+        </thead>
+        <tbody>
+           
+          <% for (let i = 0; i < rs.length; i++){ %>  
+          <tr>
+            <td><%=rs[i].m_userid%></td>
+            <td><%=rs[i].m_name%></td>
+            <td><%=rs[i].m_mail%></td>
+            <td><%=rs[i].m_mobile%></td>
+            <td><%=rs[i].m_state%></td>
+          </tr>
+          
+          <%}%>
+        </tbody>
+      </table>
+        <a href="c_home">
+      <button class="back-button">Go Back</button>
+        </a>
+    </div>
+</body>
+</html>

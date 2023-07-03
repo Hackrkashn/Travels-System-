@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+
+body {
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.screen {		
+	background: linear-gradient(90deg, #5D54A4, #7C78B8);		
+	position: relative;	
+	height: 660px;
+	width: 360px;	
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #6C63AC;	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #5D54A4, #6A679E);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #7E7BB9;	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 100px;
+}
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+
+.social-login {	
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 0px;
+	color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-login__icon {
+	padding: 20px 10px;
+	color: #fff;
+	text-decoration: none;	
+	text-shadow: 0px 0px 8px #7875B5;
+}
+
+.social-login__icon:hover {
+	transform: scale(1.5);	
+}
+body {
+    background-color: #c4c4c4;
+  
+}
+
+.text {
+    position: relative;
+    top: 50%; 
+    
+    transform: translate(50%,-50%);
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: 700;
+    color: #6C63AC;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #11b5f1,
+        1px 3px 1px #11b5f1,
+        1px 4px 1px #11b5f1,
+        1px 5px 1px #11b5f1,
+        1px 6px 1px #11b5f1,
+        1px 7px 1px #11b5f1,
+        1px 8px 1px #11b5f1,
+        1px 9px 1px #11b5f1,
+        1px 10px 1px #11b5f1,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+
+
+/* CSS */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}  
+  .note-box__message {
+	font-weight: bold;
+  }
+  
+  .note-box__close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  .note-box {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: white;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	min-width: 200px;
+	min-height: 50px;
+  }
+  
+  .note-box__close:hover {
+	color: red;
+  }
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<div  class="note-box">
+				<span class="note-box__message"><%=msg%></span>
+				<span class="note-box__close">&times;</span>
+			  </div>
+			<div class="login">
+				<span  id="welcome" class="text">Welcome user</span>
+				<script>
+					const heading = document.getElementById('welcome');
+				
+					const xhr = new XMLHttpRequest();
+					xhr.open('GET', 'http://localhost:3000/getCustomer');
+					xhr.onload = function() {
+					  if (xhr.status === 200) {
+						const cust = xhr.responseText;
+						heading.innerHTML = 'Welcome ' + cust;
+					  } else {
+						console.error('Error:', xhr.status);
+					  }
+					};
+					xhr.send();
+				  </script>
+				
+				
+				
+
+                <a href="http://localhost:3000/trips">
+				<button class="button login__submit">
+					<span class="button__text">Book New Trip</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button> </a>
+
+				<a href="http://localhost:3000/c_bookedtrips">
+				<button class="button login__submit">
+					<span class="button__text">Show My Booked Trips</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button> </a>
+				<a href="http://localhost:3000/c_alltrips">
+				<button class="button login__submit">
+					<span class="button__text">All Available Trips</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button> </a>
+
+				<a href="/c_contact">
+				<button class="button login__submit">
+					<span class="button__text">Get Managers' Contact</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button> </a>
+						
+			</div>
+				<form action="/logout" method="post">
+					<button id="updateButton" class="button-29" role="button" style="margin-left: 50px;width: 150px;">Log Out</button>					</form>
+				<script>
+					const updateButton = document.getElementById('updateButton');
+
+					updateButton.addEventListener('click', () => {
+					const xhr = new XMLHttpRequest();
+					xhr.open('PUT', '/logout');
+					xhr.setRequestHeader('Content-Type', 'application/json');
+					xhr.onload = function() {
+						if (xhr.status === 200) {
+						const response = JSON.parse(xhr.responseText);
+						redirect('/c_login');
+						window.location.href = response.redirect;
+						} else {
+						console.error('Error:', xhr.status);
+						}
+					};
+					xhr.send();
+					});
+
+				  </script>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Sortable Table</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+
+                *{
+                    padding: 0;
+                    margin: 0;
+                }
+		p {
+			margin: 0;
+		}
+
+		.container {
+                        background-image: url('http://getwallpapers.com/wallpaper/full/a/c/f/1086033-simple-backgrounds-2560x1440-smartphone.jpg');
+      background-size: cover;
+                        background-repeat: no-repeat;
+                        
+			/*max-width: 100;*/
+			margin-right: auto;
+			margin-left: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+
+		.table {
+                        margin: 160px;
+                        background-color: aliceblue;
+			width: 100%;
+			border: 1px solid #EEEEEE;
+		}
+
+		.table-header {
+                        border-radius: 8px 8px 0 0;
+			display: flex;
+			width: 100%;
+			background: #000;
+			padding: 12px 0;
+		}
+
+		.table-row {
+			display: flex;
+			width: 100%;
+			padding: 10px 0;
+		}
+
+		.table-data,
+		.header__item {
+                        font-size: 25px;
+			flex: 1 1 20%;
+			text-align: center;
+		}
+
+		.header__item {
+			text-transform: uppercase;
+		}
+
+		.filter__link {
+			color: white;
+			text-decoration: none;
+			position: relative;
+			display: inline-block;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		.filter__link::after {
+			content: '';
+			position: absolute;
+			right: -18px;
+			color: white;
+			font-size: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.filter__link.desc::after {
+			content: '(desc)';
+		}
+
+		.filter__link.asc::after {
+			content: '(asc)';
+		}
+                .table-content{
+                    border-radius: 0 0 8px 8px;
+                    background-color: aliceblue;
+                }
+                button {
+                text-align: center;
+                width: 100px;
+                height: 35px;
+                margin: 10px 40%;
+                cursor: pointer;
+                border-radius: 8px;
+                background-color: rgba(215, 255, 95, 0.8);
+                font-size: 15px;
+                font-family: 'Signika', sans-serif;
+                border: 1px rgb(101, 101, 101) solid;
+              }
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="table">
+			<div class="table-header">
+				<div class="header__item"><a id="id" class="filter__link" href="#">Trip-id</a></div>
+				<div class="header__item"><a id="from" class="filter__link filter__link--number" href="#">From</a></div>
+				<div class="header__item"><a id="to" class="filter__link filter__link--number" href="#">To</a></div>
+				<div class="header__item"><a id="date" class="filter__link filter__link--number" href="#">Date</a></div>
+				<div class="header__item"><a id="book" class="filter__link filter__link--number" href="#">Book</a></div>
+			</div>
+			<div class="table-content">	
+				<% for (let i = 0; i < rs.length; i++) { %>
+				<div class="table-row">		
+                    <div class="table-data"><%= rs[i].trip_id %></div>
+					<div class="table-data"><%= rs[i].st_city %></div>
+					<div class="table-data"><%= rs[i].ed_city %></div>
+					<div class="table-data"><%= rs[i].st_date.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }) %></div>
+					<div class="table-data"><form method="post" action="/confirm_booking"><input type="hidden" name="trip_id" value="<%= rs[i].trip_id %>"> <button type="submit" onclick="return confirm('Are you sure you want to Book this trip?')">BOOK</button> </form></div>
+
+				</div>
+				<%}%>
+			</div>	
+                         <a href="c_home">
+                            <button type="button">BACK</button>
+                          </a>
+		</div>
+	</div>
+
+</body>
+</html>
